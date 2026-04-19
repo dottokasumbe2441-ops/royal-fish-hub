@@ -1,0 +1,124 @@
+:root {
+    --color-1: #121A1B;
+    --color-2: #505039;
+    --color-3: #A7AA63;
+    --color-4: #EAE6D2;
+    --text: #fffffff6;
+    --shadow: #0000001f;
+
+
+}
+
+.Container1, .samakiContainer, .samakiInfo,
+.samakiPicture, .samaki
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
+.samakiContainer {
+    flex-direction: column;
+    width: 70%;
+    justify-content: start;
+    background-color: var(--color-3);
+    box-shadow: 10px 20px 20px 10px var(--shadow);
+    border-radius: 20px;
+    gap: 20px;
+
+}
+.samakihead {
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    padding: 10px;
+    width: 50%;    
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.samakiInfo {
+    width: 90%;
+    gap: 60px;
+    justify-content: space-around;
+    align-items: start;
+}
+.samakiPicture, .samakiPicture2{
+    width: 30%;
+    overflow-x: auto;
+    justify-content: start;
+    padding: 0px;
+    scroll-behavior: smooth;
+    scroll-snap-type: X mandatory;
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    anchor-name: --scroolSamak;
+} 
+.samakiPicture2 {
+    anchor-name: --scroolSamak2;
+}
+.samakiPicture::-webkit-scrollbar {
+    display: none;
+
+}
+.samakiPicture::scroll-button(right), .samakiPicture::scroll-button(left),
+.samakiPicture2::scroll-button(right), .samakiPicture2::scroll-button(left)
+  {
+    content: '>';
+    background-color: #A7AA63;
+    border: none;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    position-anchor: --scroolSamak;
+    position-area: right center;
+    position: fixed;
+    cursor: pointer;
+}
+
+.samakiPicture2::scroll-button(right), .samakiPicture2::scroll-button(left) {
+      position-anchor: --scroolSamak2;
+}
+.samakiPicture::scroll-button(left), .samakiPicture2::scroll-button(left) {
+    content: '<';
+    position-area: left center;
+}
+.samaki {
+    flex: 0 0 100%;
+    color: white;
+    padding: 0px;
+    border-radius: 20px;
+    scroll-snap-align: start;
+}
+.samakiImg {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    filter: brightness(80%);
+    
+}
+
+.samakiDetails {
+    width: 60%;
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.samakiDetails ul li {
+    margin-top: 10px;
+    color: var(--color-1);
+    font-weight: 600;
+    font-size: 16px;
+
+}
+.samakiDetails ul {
+    padding: 0 0 0 20px;
+}
+.makeorder2 {
+    width: 100%;
+    color: white;
+}
+.order {
+    flex-direction: column;
+    gap: 20px;
+}

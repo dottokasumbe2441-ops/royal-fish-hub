@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+   background-color: var(--color-4);
+}
+
+:root {
+    --color-1: #121A1B;
+    --color-2: #505039;
+    --color-3: #A7AA63;
+    --color-4: #EAE6D2;
+    --text: #fffffff6;
+    --shadow: #0000001f;
+
+}
+
+header, .profile, nav, .commnicationLinks, section,  .sectionDisplay,
+.sampleContainer, .sample, .packageContainer, .packContainer,
+ .package, .packImage, .package2, .package3, .makeOrder, .orderConatiner,
+ .whatsApp, .Phone, .orderImage
+
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    flex-direction: column; 
+    padding: 10px;
+    width: 100%;
+    background-color: var(--color-1);
+    color: var(--text);
+    gap: 20px;   
+}
+h1 {
+    font-size: 25px;
+}
+.profile {
+    background-color: var(--color-3);
+    padding: 10px;
+    font-size: 40px;
+    border-radius: 50%;
+}
+nav {
+    justify-content: center;
+    gap: 100px;
+    padding: 10px 0 3px 0;
+    box-shadow: 2px 5px 5px 2px var(--shadow);
+    border-bottom: 2px solid #121A1B;
+}
+.navBtn {
+    width: 150px;
+    padding: 7px;
+    border: none;
+    color: var(--color-1);
+    background-color: white;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--color-3);
+    cursor: pointer;
+}
+section{
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+.sampleContainer {
+    width: 50%;
+    justify-content: start;
+    overflow-x: auto;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+    scroll-snap-type: X mandatory;
+    anchor-name: --scrol-btn;
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    border: 2px solid var(--color-1);
+}
+.sampleContainer::-webkit-scrollbar {
+    display: none;
+}
+.sampleContainer::scroll-button(left), .sampleContainer::scroll-button(right) {
+    content: '<';
+    background-color: #A7AA63;
+    padding: 10px;
+    border: none;
+    color: var(--text);
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 40px;height: 40px;
+    position: fixed;
+    position-anchor: --scrol-btn;
+    position-area: left center;
+    translate: 50%;
+    box-shadow: 2px 5px 5px 2px var(--shadow);
+    cursor: pointer;
+}
+.sampleContainer::scroll-button(right) {
+    position-area: right center;
+    content: '>';
+    translate: -50%;
+}
+.sampleContainer::scroll-button(left):disabled, .sampleContainer::scroll-button(right):disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+.sample {
+    flex: 0 0 100%;
+    height: 250px;
+    scroll-snap-align: start;
+    background-color: var(--color-2);
+}
+.dagaaImg {
+    width: 100%;
+    box-shadow: 10px 20px 20px 10px var(--shadow);
+}
+
+.head {
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    color: var(--color-1);
+
+}
+
+.packageContainer {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    width: 80%;
+    color: var(--text);
+    border-radius: 20px;
+    box-shadow: 10px 20px 20px 10px var(--shadow);
+    padding: 10px;
+}
+
+.packContainer {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.package, .package2, .package3 {
+    width: 30%;
+    background-color: var(--color-3);
+    border-radius: 20px;
+    box-shadow: 4px 8px 8px 4px var(--shadow);
+    flex-direction: column;
+    justify-content: start;
+    
+}
+.package {
+    anchor-name: --price;
+    background-color: rgba(122, 100, 74, 0.734);
+    border: 2px solid burlywood;
+    
+}
+
+.package2 {
+    anchor-name: --price2;
+    background-color: rgba(107, 106, 106, 0.784);
+    border: 2px solid silver;
+}
+.package3 {
+    anchor-name: --price3;
+    background-color: rgba(122, 89, 4, 0.708);
+    border: 2px solid goldenrod;    
+}
+.package2 .details {
+    background-color: rgb(101, 100, 100);
+}
+.package3 .details {
+    background-color: goldenrod;
+}
+
+.headPackage {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 2px 5px 5px 2px var(--shadow);
+    text-align: center;
+    margin: 5px;
+    font-size: 23px;
+    
+}
+.packImage {
+    height: 350px;
+    border: 1px solid black;
+    width: 95%;
+    margin-top: 5px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    margin-top: 10px;
+    
+}
+.details {
+    width: 95%;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    border-radius: 10px;
+    background-color: burlywood;
+    
+}
+.Price {
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    padding: 10px;
+    width: 150px;
+    background-color: var(--color-1);
+    border-radius: 10px;
+    position: fixed;
+    z-index: 3;
+    translate: -90%;
+    transform: translateY(260%);
+    text-align: center;
+}
+.package .Price {
+    position-anchor: --price;
+   position-area: right top;
+}
+.package2 .Price {
+      position-anchor: --price2;
+      position-area: right top;
+}
+.package3 .Price {
+      position-anchor: --price3;
+      position-area: right top;
+}
+
+.makeOrder {
+    background-color: var(--color-1);
+    flex-direction: column;
+    margin-top: 40px;
+    width: 60%;
+    height: 150px;
+    box-shadow: 5px 10px 10px 5px var(--shadow);
+    border-radius: 10px;
+
+}
+
+.orderConatiner {
+    width: 90%;
+    padding: 10px;
+    justify-content: space-around;
+}
+.orderBtn, .orderBtn2 {
+    width: 200px;
+    padding: 7px;
+    background-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 16px;
+}
+.orderBtn2 {
+    background-color: var(--color-3); 
+}
+.whatsApp, .Phone {
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.851);
+    color: var(--text);
+    margin-top: 50px;
+}
+.BackTop {
+    background-color: var(--color-1);
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);  
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+.contanct {
+   padding: 20px 0 0 50px;
+}
+.footerLink {
+    padding: 0px 0 0 70px;
+}
+.footerLink li {
+    margin-top: 10px;
+}
+.footerLink li a {
+    text-decoration: underline;
+}
+.copright {
+    padding: 7px;
+    text-align: center;
+    background-color: #121A1B;
+    margin-top: 30px;
+    font-size: 12px;
+}
